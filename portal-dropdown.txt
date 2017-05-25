@@ -1,0 +1,60 @@
+{
+	"scriptActions": [
+		{
+			"name": "Add an Azure Storage account",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-add-storage",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxaddstorageaccountv01/add-storage-account-v01.sh",
+			"parameters": "<storageaccountname> <storageaccountkey>",
+			"nodes": ["Head"]
+		},
+		{
+			"name": "Install Hue",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-hue-linux",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh",
+			"parameters": null,
+			"nodes": ["Head"]
+		},
+		{
+			"name": "Install Presto",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-install-presto",
+			"scriptUri": "https://raw.githubusercontent.com/hdinsight/presto-hdinsight/master/installpresto.sh",
+			"parameters": null,
+			"nodes": ["Head", "Worker"]
+		},
+		{
+			"name": "Install Solr",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-solr-install-linux",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxsolrconfigactionv01/solr-installer-v01.sh",
+			"parameters": null,
+			"nodes": ["Head", "Worker", "Zookeeper"]
+		},
+		{
+			"name": "Install Giraph",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-giraph-install-linux",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxgiraphconfigactionv01/giraph-installer-v01.sh",
+			"parameters": null,
+			"nodes": ["Head"]
+		},
+		{
+			"name": "Pre-load Hive libraries",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-add-hive-libraries",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxsetupcustomhivelibsv01/setup-customhivelibs-v01.sh",
+			"parameters": "wasbs://<storagecontainername>@<storageaccountname>.blob.core.windows.net/",
+			"nodes": ["Head", "Worker"]
+		},
+		{
+			"name": "Install or update Mono",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-install-mono",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/install-mono/install-mono.bash",
+			"parameters": null,
+			"nodes": ["Head", "Worker"]
+		}
+	]
+}
