@@ -6,8 +6,9 @@
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-add-storage",
 			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxaddstorageaccountv01/add-storage-account-v01.sh",
 			"parameters": "<storageaccountname> <storageaccountkey>",
-			"nodes": ["Head"],
-			"persist": true
+			"nodeTypes": ["Head"],
+			"persist": true,
+			"restrictToClusterTypes": null
 		},
 		{
 			"name": "Install Hue",
@@ -15,8 +16,9 @@
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-hue-linux",
 			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh",
 			"parameters": null,
-			"nodes": ["Head"],
-			"persist": true
+			"nodeTypes": ["Head"],
+			"persist": true,
+			"restrictToClusterTypes": null
 		},
 		{
 			"name": "Install Presto",
@@ -24,8 +26,9 @@
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-install-presto",
 			"scriptUri": "https://raw.githubusercontent.com/hdinsight/presto-hdinsight/master/installpresto.sh",
 			"parameters": null,
-			"nodes": ["Head", "Worker"],
-			"persist": true
+			"nodeTypes": ["Head", "Worker"],
+			"persist": true,
+			"restrictToClusterTypes": ["Hadoop"]
 		},
 		{
 			"name": "Install Solr",
@@ -33,8 +36,9 @@
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-solr-install-linux",
 			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxsolrconfigactionv01/solr-installer-v01.sh",
 			"parameters": null,
-			"nodes": ["Head", "Worker", "Zookeeper"],
-			"persist": true
+			"nodeTypes": ["Head", "Worker", "Zookeeper"],
+			"persist": true,
+			"restrictToClusterTypes": null
 		},
 		{
 			"name": "Install Giraph",
@@ -42,8 +46,9 @@
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-giraph-install-linux",
 			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxgiraphconfigactionv01/giraph-installer-v01.sh",
 			"parameters": null,
-			"nodes": ["Head"],
-			"persist": true
+			"nodeTypes": ["Head"],
+			"persist": true,
+			"restrictToClusterTypes": null
 		},
 		{
 			"name": "Pre-load Hive libraries",
@@ -51,8 +56,9 @@
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-add-hive-libraries",
 			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxsetupcustomhivelibsv01/setup-customhivelibs-v01.sh",
 			"parameters": "wasbs://<storagecontainername>@<storageaccountname>.blob.core.windows.net/",
-			"nodes": ["Head", "Worker"],
-			"persist": true
+			"nodeTypes": ["Head", "Worker"],
+			"persist": true,
+			"restrictToClusterTypes": null
 		},
 		{
 			"name": "Install or update Mono",
@@ -60,8 +66,9 @@
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-install-mono",
 			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/install-mono/install-mono.bash",
 			"parameters": null,
-			"nodes": ["Head", "Worker"],
-			"persist": true
+			"nodeTypes": ["Head", "Worker"],
+			"persist": true,
+			"restrictToClusterTypes": null
 		}
 	]
 }
