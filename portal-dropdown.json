@@ -21,7 +21,7 @@
 			"nodeTypes": ["Worker"],
 			"persist": true,
 			"restrictToClusterTypes": null
-		}
+		},
 		{
 			"name": "Install Giraph",
 			"description": null,
@@ -81,6 +81,6 @@
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
 			"restrictToClusterTypes": null
-		},
+		}
 	]
 }
