@@ -50,7 +50,7 @@
 			"parameters": null,
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
-			"restrictToClusterTypes": null
+			"restrictToClusterTypes": ["storm"]
 		},
 		{
 			"name": "Install Presto",
