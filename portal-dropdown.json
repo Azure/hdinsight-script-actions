@@ -11,7 +11,7 @@
 			"nodeTypes": ["Head"],
 			"persist": true,
 			"restrictToClusterTypes": null
-			"restrictToClusterVersion": null
+			"restrictToClusterVersions": null
 		},
 		{
 			"name": "Install additional R libraries",
@@ -22,7 +22,7 @@
 			"nodeTypes": ["Worker"],
 			"persist": true,
 			"restrictToClusterTypes": null
-			"restrictToClusterVersion": null
+			"restrictToClusterVersions": null
 		},
 		{
 			"name": "Install Giraph",
@@ -33,7 +33,7 @@
 			"nodeTypes": ["Head"],
 			"persist": true,
 			"restrictToClusterTypes": null
-			"restrictToClusterVersion": null
+			"restrictToClusterVersions": null
 		},
 		{
 			"name": "Install Hue",
@@ -44,7 +44,7 @@
 			"nodeTypes": ["Head"],
 			"persist": true,
 			"restrictToClusterTypes": null
-			"restrictToClusterVersion": null
+			"restrictToClusterVersions": null
 		},
 		{
 			"name": "Install or update Mono",
@@ -55,7 +55,7 @@
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
 			"restrictToClusterTypes": ["storm"]
-			"restrictToClusterVersion": null
+			"restrictToClusterVersions": null
 		},
 		{
 			"name": "Install Presto",
@@ -66,7 +66,7 @@
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
 			"restrictToClusterTypes": ["Hadoop"]
-			"restrictToClusterVersion": ["3.6"]
+			"restrictToClusterVersions": ["3.6"]
 		},
 		{
 			"name": "Install Solr",
@@ -77,7 +77,7 @@
 			"nodeTypes": ["Head", "Worker", "Zookeeper"],
 			"persist": true,
 			"restrictToClusterTypes": null
-			"restrictToClusterVersion": null
+			"restrictToClusterVersions": null
 		},
 		{
 			"name": "Pre-load Hive libraries",
@@ -88,7 +88,7 @@
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
 			"restrictToClusterTypes": null
-			"restrictToClusterVersion": null
+			"restrictToClusterVersions": null
 		}
 	]
 }
