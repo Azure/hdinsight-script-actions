@@ -10,7 +10,7 @@
 			"parameters": "<storageaccountname> <storageaccountkey>",
 			"nodeTypes": ["Head"],
 			"persist": true,
-			"restrictToClusterTypes": null
+			"restrictToClusterTypes": null,
 			"restrictToClusterVersions": null
 		},
 		{
@@ -21,7 +21,7 @@
 			"parameters": "[useCRAN] bitops stringr arules",
 			"nodeTypes": ["Worker"],
 			"persist": true,
-			"restrictToClusterTypes": null
+			"restrictToClusterTypes": ["RServer"],
 			"restrictToClusterVersions": null
 		},
 		{
@@ -32,7 +32,7 @@
 			"parameters": null,
 			"nodeTypes": ["Head"],
 			"persist": true,
-			"restrictToClusterTypes": null
+			"restrictToClusterTypes": null,
 			"restrictToClusterVersions": null
 		},
 		{
@@ -43,7 +43,7 @@
 			"parameters": null,
 			"nodeTypes": ["Head"],
 			"persist": true,
-			"restrictToClusterTypes": null
+			"restrictToClusterTypes": null,
 			"restrictToClusterVersions": null
 		},
 		{
@@ -54,7 +54,7 @@
 			"parameters": null,
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
-			"restrictToClusterTypes": ["storm"]
+			"restrictToClusterTypes": ["Storm"],
 			"restrictToClusterVersions": null
 		},
 		{
@@ -65,7 +65,7 @@
 			"parameters": null,
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
-			"restrictToClusterTypes": ["Hadoop"]
+			"restrictToClusterTypes": ["Hadoop"],
 			"restrictToClusterVersions": ["3.6"]
 		},
 		{
@@ -76,7 +76,7 @@
 			"parameters": null,
 			"nodeTypes": ["Head", "Worker", "Zookeeper"],
 			"persist": true,
-			"restrictToClusterTypes": null
+			"restrictToClusterTypes": null,
 			"restrictToClusterVersions": null
 		},
 		{
@@ -87,7 +87,7 @@
 			"parameters": "wasbs://<storagecontainername>@<storageaccountname>.blob.core.windows.net/",
 			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
-			"restrictToClusterTypes": null
+			"restrictToClusterTypes": null,
 			"restrictToClusterVersions": null
 		}
 	]
