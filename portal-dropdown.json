@@ -13,12 +13,42 @@
 			"restrictToClusterTypes": null
 		},
 		{
+			"name": "Install additional R libraries",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-r-server-get-started#install-r-packages",
+			"scriptUri": "https://mrsactionscripts.blob.core.windows.net/rpackages-v01/InstallRPackages.sh",
+			"parameters": "[useCRAN] bitops stringr arules",
+			"nodeTypes": ["Worker"],
+			"persist": true,
+			"restrictToClusterTypes": null
+		}
+		{
+			"name": "Install Giraph",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-giraph-install-linux",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxgiraphconfigactionv01/giraph-installer-v01.sh",
+			"parameters": null,
+			"nodeTypes": ["Head"],
+			"persist": true,
+			"restrictToClusterTypes": null
+		},
+		{
 			"name": "Install Hue",
 			"description": null,
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-hue-linux",
 			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh",
 			"parameters": null,
 			"nodeTypes": ["Head"],
+			"persist": true,
+			"restrictToClusterTypes": null
+		},
+		{
+			"name": "Install or update Mono",
+			"description": null,
+			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-install-mono",
+			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/install-mono/install-mono.bash",
+			"parameters": null,
+			"nodeTypes": ["Head", "Worker"],
 			"persist": true,
 			"restrictToClusterTypes": null
 		},
@@ -43,16 +73,6 @@
 			"restrictToClusterTypes": null
 		},
 		{
-			"name": "Install Giraph",
-			"description": null,
-			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-giraph-install-linux",
-			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/linuxgiraphconfigactionv01/giraph-installer-v01.sh",
-			"parameters": null,
-			"nodeTypes": ["Head"],
-			"persist": true,
-			"restrictToClusterTypes": null
-		},
-		{
 			"name": "Pre-load Hive libraries",
 			"description": null,
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-add-hive-libraries",
@@ -62,15 +82,5 @@
 			"persist": true,
 			"restrictToClusterTypes": null
 		},
-		{
-			"name": "Install or update Mono",
-			"description": null,
-			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-install-mono",
-			"scriptUri": "https://hdiconfigactions.blob.core.windows.net/install-mono/install-mono.bash",
-			"parameters": null,
-			"nodeTypes": ["Head", "Worker"],
-			"persist": true,
-			"restrictToClusterTypes": null
-		}
 	]
 }
