@@ -56,17 +56,6 @@
 			"restrictToClusterVersions": null
 		},
 		{
-			"name": "Install Presto",
-			"description": null,
-			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-install-presto",
-			"scriptUri": "https://raw.githubusercontent.com/hdinsight/presto-hdinsight/master/installpresto.sh",
-			"parameters": null,
-			"nodeTypes": ["Head", "Worker"],
-			"persist": true,
-			"restrictToClusterTypes": ["Hadoop"],
-			"restrictToClusterVersions": ["3.6"]
-		},
-		{
 			"name": "Install Solr",
 			"description": null,
 			"learnMoreUri": "https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-solr-install-linux",
